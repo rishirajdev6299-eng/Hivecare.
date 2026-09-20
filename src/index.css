@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Add your global background + text color */
+  background: linear-gradient(
+    to right,
+    #f5f5dc,   /* beige */
+    #ffb6c1,   /* soft pink */
+    #87ceeb,   /* sky blue */
+    #ffffff,   /* white */
+    #32cd32    /* lime green */
+  );/* Color*/
+  color: white;
+}
+
+/* Optional: make content sections readable */
+.section {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

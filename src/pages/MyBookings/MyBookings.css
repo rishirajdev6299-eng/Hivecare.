@@ -1,0 +1,1266 @@
+
+/* =========================================================
+   HIVECARE - MODERN BOOKING PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.booking-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 55px 20px 80px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(37, 99, 235, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(14, 165, 233, 0.12),
+      transparent 32%
+    ),
+    #f5f8ff;
+  color: #172033;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.booking-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(
+      rgba(37, 99, 235, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+}
+
+.booking-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.orb-one {
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: -80px;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.orb-two {
+  width: 320px;
+  height: 320px;
+  right: -130px;
+  bottom: -120px;
+  background: rgba(14, 165, 233, 0.1);
+}
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.booking-wrapper {
+  width: min(1200px, 100%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.booking-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 17px;
+  border-radius: 50px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.13);
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  margin-bottom: 18px;
+}
+
+.booking-hero h1 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2.5px;
+  color: #101828;
+}
+
+.booking-hero h1 span {
+  display: inline-block;
+  color: #2563eb;
+}
+
+.booking-hero p {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.hero-features div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #526071;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-features i {
+  color: #2563eb;
+  font-size: 17px;
+}
+
+/* =========================================================
+   BOOKING LAYOUT
+========================================================= */
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.5fr;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #e5eaf3;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, 0.1),
+    0 5px 20px rgba(37, 99, 235, 0.04);
+}
+
+/* =========================================================
+   LEFT INFO
+========================================================= */
+
+.booking-info {
+  position: relative;
+  padding: 48px 38px;
+  background:
+    linear-gradient(
+      145deg,
+      #0f4fd8 0%,
+      #2563eb 52%,
+      #168eea 100%
+    );
+  color: white;
+  overflow: hidden;
+}
+
+.booking-info::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  right: -140px;
+  top: -110px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.booking-info::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  left: -120px;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.info-icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 27px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.booking-info h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 29px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.booking-info > p {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 38px;
+}
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.booking-steps {
+  position: relative;
+  z-index: 2;
+}
+
+.booking-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.booking-step div {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.booking-step.active div {
+  background: white;
+  color: #2563eb;
+}
+
+.booking-step span {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.step-line {
+  width: 1px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 5px 0 5px 19px;
+}
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.info-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  margin-top: 42px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.info-card > i {
+  font-size: 19px;
+  margin-top: 2px;
+}
+
+.info-card strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.info-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM AREA
+========================================================= */
+
+.booking-form {
+  padding: 45px 48px;
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 28px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.form-heading span {
+  display: block;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  margin-bottom: 6px;
+}
+
+.form-heading h3 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.secure-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  border-radius: 9px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.field-group {
+  margin-top: 23px;
+}
+
+.field-group > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.field-group > label i {
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap > i:first-child {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #98a2b3;
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.input-wrap input,
+.input-wrap select {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #dce2eb;
+  border-radius: 13px;
+  outline: none;
+  background: #fbfcfe;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 43px;
+  transition: 0.2s ease;
+}
+
+.input-wrap input::placeholder {
+  color: #a0a8b5;
+}
+
+.input-wrap input:focus,
+.input-wrap select:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.input-wrap select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667085;
+  pointer-events: none;
+  font-size: 13px;
+}
+
+/* =========================================================
+   LOCKED SERVICE
+========================================================= */
+
+.locked-service {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px 14px;
+  border: 1px solid #dbe6ff;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #f5f8ff,
+    #edf4ff
+  );
+}
+
+.selected-service-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+}
+
+.locked-service div:nth-child(2) {
+  flex: 1;
+}
+
+.locked-service small {
+  display: block;
+  font-size: 9px;
+  color: #667085;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.locked-service strong {
+  display: block;
+  font-size: 14px;
+  margin-top: 2px;
+  color: #172033;
+}
+
+.locked-service > i {
+  color: #16a34a;
+  font-size: 19px;
+}
+
+/* =========================================================
+   TWO COLUMNS
+========================================================= */
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+/* =========================================================
+   TUTOR SECTION
+========================================================= */
+
+.tutor-section {
+  margin-top: 23px;
+  padding: 20px;
+  border-radius: 17px;
+  background: linear-gradient(
+    135deg,
+    #f7f9ff,
+    #f0f6ff
+  );
+  border: 1px solid #dce8ff;
+}
+
+.tutor-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.tutor-title-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+}
+
+.tutor-title span {
+  display: block;
+  color: #2563eb;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.tutor-title h4 {
+  margin: 2px 0 0;
+  font-size: 15px;
+  color: #172033;
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-display {
+  min-height: 52px;
+  margin-top: 23px;
+  padding: 10px 17px;
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    #f0fdf4,
+    #ecfdf3
+  );
+  border: 1px solid #ccefd8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price-display span {
+  font-size: 8px;
+  color: #15803d;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.price-display strong {
+  color: #15803d;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.price-display small {
+  color: #65a30d;
+  font-size: 9px;
+}
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-group {
+  margin-top: 25px;
+}
+
+.payment-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.payment-card {
+  min-height: 77px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #dce2eb;
+  border-radius: 14px;
+  background: #fbfcfe;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-card:hover {
+  border-color: #9dbcf9;
+  transform: translateY(-1px);
+}
+
+.payment-card.active {
+  border-color: #3b82f6;
+  background: #f3f7ff;
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.07);
+}
+
+.payment-card input {
+  display: none;
+}
+
+.payment-card-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #eaf1ff;
+  color: #2563eb;
+  font-size: 17px;
+}
+
+.payment-card-text {
+  flex: 1;
+}
+
+.payment-card-text strong {
+  display: block;
+  font-size: 12px;
+  color: #172033;
+}
+
+.payment-card-text small {
+  display: block;
+  color: #7b8494;
+  font-size: 9px;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.payment-radio {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #c5ccd7;
+  border-radius: 50%;
+  position: relative;
+}
+
+.payment-card.active .payment-radio {
+  border-color: #2563eb;
+}
+
+.payment-card.active .payment-radio::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563eb;
+  top: 2px;
+  left: 2px;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.booking-summary {
+  margin-top: 25px;
+  padding: 15px 17px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e7ebf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.summary-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eaf1ff;
+  color: #2563eb;
+}
+
+.summary-left span {
+  display: block;
+  font-size: 8px;
+  color: #98a2b3;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.summary-left strong {
+  display: block;
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #344054;
+  margin-top: 2px;
+}
+
+.summary-price {
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.confirm-booking-btn {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 14px;
+  margin-top: 17px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    100deg,
+    #1d4ed8,
+    #2563eb,
+    #168eea
+  );
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.24);
+  transition: 0.2s ease;
+}
+
+.confirm-booking-btn span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.confirm-booking-btn > i {
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.confirm-booking-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.3);
+}
+
+.confirm-booking-btn:hover:not(:disabled) > i {
+  transform: translateX(4px);
+}
+
+.confirm-booking-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  color: #98a2b3;
+  font-size: 9px;
+}
+
+.form-footer i {
+  color: #16a34a;
+}
+
+/* =========================================================
+   FIELD ERROR
+========================================================= */
+
+.field-error {
+  display: block;
+  color: #dc2626;
+  font-size: 10px;
+  margin-top: 6px;
+}
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.booking-notification {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+  width: min(390px, calc(100vw - 30px));
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.18);
+  animation: notificationIn 0.35s ease;
+}
+
+@keyframes notificationIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  font-size: 18px;
+}
+
+.booking-notification.success
+  .notification-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.booking-notification.error
+  .notification-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.booking-notification.warning
+  .notification-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-text strong {
+  display: block;
+  color: #172033;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.notification-text span {
+  display: block;
+  color: #667085;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.booking-notification > button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #98a2b3;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.booking-notification > button:hover {
+  background: #f2f4f7;
+  color: #344054;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-info {
+    padding: 35px;
+  }
+
+  .booking-steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .booking-step {
+    flex: 1;
+  }
+
+  .step-line {
+    width: 25px;
+    height: 1px;
+    margin: 0;
+  }
+
+  .info-card {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .booking-page {
+    padding: 30px 12px 50px;
+  }
+
+  .booking-hero {
+    margin-bottom: 30px;
+  }
+
+  .booking-hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-features {
+    gap: 12px;
+  }
+
+  .hero-features div {
+    font-size: 11px;
+  }
+
+  .booking-info {
+    padding: 30px 24px;
+  }
+
+  .booking-info h2 {
+    font-size: 25px;
+  }
+
+  .booking-steps {
+    display: block;
+  }
+
+  .booking-step {
+    margin-bottom: 10px;
+  }
+
+  .step-line {
+    width: 1px;
+    height: 16px;
+    margin: -4px 0 -4px 18px;
+  }
+
+  .booking-form {
+    padding: 30px 22px;
+  }
+
+  .form-heading {
+    align-items: center;
+  }
+
+  .form-heading h3 {
+    font-size: 21px;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .price-display {
+    margin-top: 23px;
+  }
+
+  .payment-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary {
+    align-items: flex-start;
+  }
+
+  .summary-left strong {
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 450px) {
+  .booking-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .booking-hero h1 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+  }
+
+  .booking-hero p {
+    font-size: 13px;
+  }
+
+  .booking-info {
+    padding: 25px 20px;
+  }
+
+  .booking-form {
+    padding: 25px 16px;
+  }
+
+  .form-heading {
+    display: block;
+  }
+
+  .secure-badge {
+    display: inline-flex;
+    margin-top: 12px;
+  }
+
+  .tutor-section {
+    padding: 15px;
+  }
+
+  .booking-summary {
+    padding: 12px;
+  }
+
+  .summary-price {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   TIME SLOT
+   MATCHES PREFERRED DATE INPUT
+========================================================= */
+
+.col-md-4 {
+  width: 100%;
+}
+
+.col-md-4 > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+/* Add clock icon style to label */
+.col-md-4 > label::before {
+  content: "\F1A2";
+  font-family: "bootstrap-icons";
+  color: #2563eb;
+  font-size: 14px;
+}
+
+/* =========================================================
+   TIME SLOT INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* =========================================================
+   CLOCK ICON
+========================================================= */
+
+.input-wrapper > i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #98a2b3;
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* =========================================================
+   TIME SLOT SELECT
+========================================================= */
+
+.input-wrapper select {
+  width: 100%;
+  height: 52px;
+
+  border: 1px solid #dce2eb;
+  border-radius: 13px;
+
+  outline: none;
+
+  background: #fbfcfe;
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+
+  padding: 0 43px;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  transition: 0.2s ease;
+}
+
+/* =========================================================
+   DROPDOWN ARROW
+========================================================= */
+
+.input-wrapper::after {
+  content: "\F282";
+
+  position: absolute;
+  right: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-family: "bootstrap-icons";
+
+  color: #98a2b3;
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.input-wrapper select:hover {
+  border-color: #c5d3e4;
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.input-wrapper select:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+/* =========================================================
+   SELECT OPTIONS
+========================================================= */
+
+.input-wrapper select option {
+  background: #ffffff;
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+/* Placeholder option */
+.input-wrapper select option[value=""] {
+  color: #a0a8b5;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .input-wrapper select {
+    width: 100%;
+    height: 52px;
+
+    padding-left: 43px;
+    padding-right: 43px;
+
+    font-size: 13px;
+  }
+
+  .input-wrapper > i {
+    left: 15px;
+    font-size: 16px;
+  }
+
+  .input-wrapper::after {
+    right: 15px;
+  }
+}

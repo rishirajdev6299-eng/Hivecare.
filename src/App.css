@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* crisp white + soft gray */
+  color: #212529; /* dark charcoal text */
+}
+
+
+/* Cards */
+.card, .service-card, .booking-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .service-card:hover, .booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.btn {
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #20c997;
+  transform: translateY(-2px);
+}
+
+
+/* Inputs */
+input:focus, select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+  outline: none;
+}

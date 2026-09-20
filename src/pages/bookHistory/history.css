@@ -1,0 +1,2601 @@
+/* =========================================================
+   HIVECARE - BOOKING HISTORY
+   Modern Premium Blue UI
+   Scoped ONLY to History component
+========================================================= */
+
+.history-page {
+  min-height: 100vh;
+  padding: 30px 0 60px;
+  background:
+    radial-gradient(circle at top left, rgba(16, 108, 238, 0.08), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(25, 135, 84, 0.06), transparent 30%),
+    #f5f8fc;
+  color: #172033;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.history-page > .container {
+  max-width: 1180px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.history-small-title {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 13px;
+  border-radius: 50px;
+  background: rgba(16, 108, 238, 0.09);
+  color: #106cee;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.history-header h1 {
+  margin: 12px 0 7px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #172033;
+  letter-spacing: -0.7px;
+}
+
+.history-header p {
+  margin: 0;
+  color: #6c7789;
+  font-size: 15px;
+}
+
+/* =========================================================
+   BOOKING COUNT
+========================================================= */
+
+.booking-count {
+  min-width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 20px;
+  background: #ffffff;
+  border: 1px solid #e4eaf2;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(25, 55, 95, 0.07);
+}
+
+.count-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #106cee, #438df4);
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.booking-count span {
+  display: block;
+  margin-bottom: 3px;
+  color: #7b8798;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.booking-count strong {
+  display: block;
+  color: #172033;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   BOOKING LIST
+========================================================= */
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =========================================================
+   HISTORY CARD
+========================================================= */
+
+.history-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e9f1;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(25, 55, 95, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  border-color: #d4e1f2;
+  box-shadow: 0 16px 38px rgba(25, 55, 95, 0.11);
+}
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.history-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 25px;
+  border-bottom: 1px solid #edf1f6;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfdff 100%
+    );
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 108, 238, 0.12),
+    rgba(67, 141, 244, 0.2)
+  );
+  color: #106cee;
+  font-size: 22px;
+}
+
+.service-info > div:last-child {
+  min-width: 0;
+}
+
+.service-info span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8a95a5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.service-info h3 {
+  margin: 0;
+  overflow: hidden;
+  color: #172033;
+  font-size: 21px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.history-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 8px 13px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.history-status i {
+  font-size: 13px;
+}
+
+.history-status.completed {
+  background: #e9f9f0;
+  color: #198754;
+}
+
+.history-status.accepted {
+  background: #eaf2ff;
+  color: #106cee;
+}
+
+.history-status.pending {
+  background: #fff6df;
+  color: #b77900;
+}
+
+.history-status.rejected {
+  background: #fff0f0;
+  color: #dc3545;
+}
+
+.history-status.cancelled {
+  background: #f1f2f4;
+  color: #68717e;
+}
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.history-card-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 22px 25px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+  background: #f8fafd;
+  border: 1px solid #edf1f6;
+  border-radius: 13px;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.info-box:hover {
+  background: #f4f8ff;
+  border-color: #dce7f7;
+}
+
+/*
+   Overrides the inline info-icon styles ONLY inside
+   .history-page, without affecting other components.
+*/
+
+.history-page .info-box .info-icon {
+  width: 45px !important;
+  height: 45px !important;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 12px;
+  background: #eef5ff !important;
+  color: #106cee !important;
+  font-size: 19px;
+}
+
+.history-page .info-box .info-icon i {
+  margin-top: 0 !important;
+  font-size: 19px !important;
+}
+
+.info-box > div:last-child {
+  min-width: 0;
+}
+
+.info-box span {
+  display: block;
+  margin-bottom: 3px;
+  color: #8994a4;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.history-page .info-box strong {
+  display: block;
+  color: #253044;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.5;
+
+  /* Allow long text/address to wrap */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.price-box {
+  background: linear-gradient(
+    135deg,
+    #f0fff7,
+    #f8fffb
+  );
+  border-color: #dcefe5;
+}
+
+.price-box .info-icon {
+  background: #e6f8ee !important;
+  color: #198754 !important;
+}
+
+.price-box strong {
+  color: #198754;
+  font-size: 16px;
+}
+
+/* =========================================================
+   BOOKING DETAILS
+========================================================= */
+
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 0 25px;
+  padding: 18px 0;
+  border-top: 1px solid #edf1f6;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 4px 16px;
+  border-right: 1px solid #edf1f6;
+}
+
+.detail-item:first-child {
+  padding-left: 0;
+}
+
+.detail-item:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.detail-item > i {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f0f5fc;
+  color: #106cee;
+  font-size: 15px;
+}
+
+.detail-item > div {
+  min-width: 0;
+}
+
+.detail-item span {
+  display: block;
+  margin-bottom: 3px;
+  color: #8994a4;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.detail-item strong {
+  display: block;
+  overflow: hidden;
+  color: #283347;
+  font-size: 12px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.payment-status {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 3px;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+}
+
+.payment-status.paid {
+  color: #198754 !important;
+}
+
+.payment-status.pending {
+  color: #b77900 !important;
+}
+
+/* =========================================================
+   PAYMENT SECTION
+========================================================= */
+
+.payment-section {
+  margin: 0 25px;
+  padding: 18px 0;
+}
+
+.payment-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 19px;
+  border: 1px solid #dce8f8;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #f3f8ff,
+    #f9fbff
+  );
+}
+
+.payment-action span {
+  display: block;
+  margin-bottom: 4px;
+  color: #68778c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.payment-action strong {
+  display: block;
+  color: #106cee;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PAY BUTTON
+========================================================= */
+
+.pay-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 125px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #106cee,
+    #438df4
+  );
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+  box-shadow: 0 7px 17px rgba(16, 108, 238, 0.2);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pay-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(16, 108, 238, 0.28);
+}
+
+.pay-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   PAYMENT WAITING
+========================================================= */
+
+.payment-waiting {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid #eee4c8;
+  border-radius: 14px;
+  background: #fffbf0;
+}
+
+.waiting-icon {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff1c7;
+  color: #b77900;
+  font-size: 18px;
+}
+
+.payment-waiting strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #765700;
+  font-size: 13px;
+}
+
+.payment-waiting p {
+  margin: 0;
+  color: #9a8659;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PAYMENT SUCCESS
+========================================================= */
+
+.payment-success {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 17px;
+  border: 1px solid #d8efdf;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #f2fff6,
+    #fafffc
+  );
+}
+
+.success-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.success-icon {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  font-size: 19px;
+}
+
+.success-left strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #187346;
+  font-size: 13px;
+}
+
+.success-left span {
+  display: block;
+  color: #6e8d79;
+  font-size: 11px;
+}
+
+.view-receipt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border: 1px solid #c9e3d2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #198754;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.view-receipt-btn:hover {
+  background: #eefaf2;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.history-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 25px;
+  background: #fbfcfe;
+}
+
+.history-card-footer > span {
+  display: inline-flex;
+  align-items: center;
+  color: #8a95a5;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 13px;
+  border: 1px solid #dce5f1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #526177;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.edit-button:hover {
+  color: #106cee;
+  border-color: #bdd4f4;
+  background: #f3f8ff;
+}
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-booking-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border: 1px solid #f0caca;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #dc3545;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cancel-booking-btn:hover:not(:disabled) {
+  background: #fff2f3;
+  border-color: #e9aeb4;
+  transform: translateY(-1px);
+}
+
+.cancel-booking-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   CANCELLED BADGE
+========================================================= */
+
+.cancelled-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border-radius: 8px;
+  background: #f0f1f3;
+  color: #707984;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   EDIT BOOKING CARD
+========================================================= */
+
+.edit-booking-card {
+  margin-bottom: 28px;
+  padding: 25px;
+  border: 1px solid #dce7f5;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(25, 55, 95, 0.08);
+}
+
+.edit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.edit-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.edit-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #edf5ff;
+  color: #106cee;
+  font-size: 19px;
+}
+
+.edit-header h4 {
+  margin: 0 0 3px;
+  color: #202b3d;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.edit-header p {
+  margin: 0;
+  color: #8792a2;
+  font-size: 12px;
+}
+
+.close-edit {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  background: #f3f5f8;
+  color: #697486;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-edit:hover {
+  background: #ffeef0;
+  color: #dc3545;
+}
+
+.edit-booking-card label {
+  display: block;
+  margin-bottom: 7px;
+  color: #4e5c70;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper > i {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  z-index: 1;
+  color: #8795a9;
+  font-size: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px 0 39px;
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+  outline: none;
+  background: #fbfcfe;
+  color: #253044;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: #106cee;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 108, 238, 0.09);
+}
+/* =========================================================
+   TIME SLOT SELECT
+   Matches the existing History input design
+========================================================= */
+
+.history-page .input-wrapper select {
+  width: 100%;
+  height: 44px;
+  padding: 0 38px 0 39px;
+
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+
+  outline: none;
+  background: #fbfcfe;
+  color: #253044;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  appearance: auto;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.history-page .input-wrapper select:hover {
+  border-color: #cbd8e8;
+  background: #ffffff;
+}
+
+.history-page .input-wrapper select:focus {
+  border-color: #106cee;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 108, 238, 0.09);
+}
+
+/* Placeholder option */
+.history-page .input-wrapper select:invalid {
+  color: #8795a9;
+}
+
+/* Selected value */
+.history-page .input-wrapper select option {
+  color: #253044;
+  background: #ffffff;
+  font-size: 13px;
+}
+
+/* Placeholder option inside dropdown */
+.history-page .input-wrapper select option[value=""] {
+  color: #8795a9;
+}
+
+/* Keep the clock icon properly positioned */
+.history-page .input-wrapper > i {
+  z-index: 2;
+}
+
+/* =========================================================
+   TIME SLOT - MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .history-page .input-wrapper select {
+    height: 44px;
+    padding-left: 39px;
+    font-size: 13px;
+  }
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn-cancel,
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 17px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-cancel {
+  border: 1px solid #dce3ec;
+  background: #ffffff;
+  color: #596678;
+}
+
+.btn-cancel:hover {
+  background: #f5f7fa;
+}
+
+.btn-save {
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #106cee,
+    #438df4
+  );
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(16, 108, 238, 0.18);
+}
+
+.btn-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 19px rgba(16, 108, 238, 0.24);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.history-loading {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  border: 1px solid #e4eaf2;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(25, 55, 95, 0.05);
+}
+
+.history-loading .spinner-border {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  color: #106cee;
+  border-width: 3px;
+}
+
+.history-loading p {
+  margin: 0;
+  color: #7b8798;
+  font-size: 13px;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.history-empty {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px solid #e4eaf2;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(25, 55, 95, 0.06);
+}
+
+.empty-icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  background: #eef5ff;
+  color: #106cee;
+  font-size: 30px;
+}
+
+.history-empty h3 {
+  margin: 0 0 8px;
+  color: #202b3d;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.history-empty p {
+  max-width: 420px;
+  margin: 0 auto;
+  color: #818c9c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.history-notification {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+  width: min(410px, calc(100vw - 30px));
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 15px 15px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(20, 42, 72, 0.18);
+  animation: historyNotificationIn 0.35s ease;
+}
+
+@keyframes historyNotificationIn {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+.history-notification.success .notification-icon {
+  background: #e8f8ef;
+  color: #198754;
+}
+
+.history-notification.error .notification-icon {
+  background: #fff0f1;
+  color: #dc3545;
+}
+
+.history-notification.warning .notification-icon {
+  background: #fff7df;
+  color: #b77900;
+}
+
+.history-notification.info .notification-icon {
+  background: #edf5ff;
+  color: #106cee;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-content strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #202b3d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #778397;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.notification-close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #8a95a5;
+  cursor: pointer;
+}
+
+.notification-close:hover {
+  background: #f2f4f7;
+  color: #303b4c;
+}
+
+/* =========================================================
+   RECEIPT OVERLAY
+========================================================= */
+
+.receipt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(13, 25, 44, 0.62);
+  backdrop-filter: blur(5px);
+  animation: historyOverlayIn 0.2s ease;
+}
+
+@keyframes historyOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   RECEIPT MODAL
+========================================================= */
+
+.receipt-modal {
+  width: min(650px, 100%);
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  animation: historyModalIn 0.25s ease;
+}
+
+@keyframes historyModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   RECEIPT HEADER
+========================================================= */
+
+.receipt-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 23px 25px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.receipt-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #106cee;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.receipt-logo i {
+  font-size: 20px;
+}
+
+.receipt-modal-header p {
+  margin: 5px 0 0;
+  color: #8792a2;
+  font-size: 12px;
+}
+
+.receipt-close {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  background: #f3f5f8;
+  color: #687486;
+  cursor: pointer;
+}
+
+.receipt-close:hover {
+  background: #ffeef0;
+  color: #dc3545;
+}
+
+/* =========================================================
+   RECEIPT SUCCESS
+========================================================= */
+
+.receipt-success {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 25px;
+  padding: 17px;
+  border: 1px solid #d9efdf;
+  border-radius: 14px;
+  background: #f4fff7;
+}
+
+.receipt-success-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.receipt-success h3 {
+  margin: 0 0 3px;
+  color: #176f42;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.receipt-success p {
+  margin: 0;
+  color: #71907b;
+  font-size: 12px;
+}
+
+/* =========================================================
+   RECEIPT DETAILS
+========================================================= */
+
+.receipt-details {
+  margin: 0 25px;
+  padding: 4px 0;
+  border-top: 1px solid #edf1f6;
+}
+
+.receipt-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+}
+
+.receipt-row span {
+  color: #7c8798;
+  font-size: 12px;
+}
+
+.receipt-row strong {
+  max-width: 62%;
+  overflow: hidden;
+  color: #263145;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.receipt-row .receipt-amount {
+  color: #106cee;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.receipt-paid {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #198754 !important;
+}
+
+/* =========================================================
+   RECEIPT FOOTER
+========================================================= */
+
+.receipt-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 25px 23px;
+  border-top: 1px solid #edf1f6;
+}
+
+.receipt-download-btn,
+.receipt-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 41px;
+  padding: 9px 16px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.receipt-download-btn {
+  gap: 7px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #106cee,
+    #438df4
+  );
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(16, 108, 238, 0.18);
+}
+
+.receipt-download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(16, 108, 238, 0.25);
+}
+
+.receipt-close-btn {
+  border: 1px solid #dce3ec;
+  background: #ffffff;
+  color: #596678;
+}
+
+.receipt-close-btn:hover {
+  background: #f5f7fa;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.history-page ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.history-page ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-page ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cbd5e1;
+}
+
+.history-page ::-webkit-scrollbar-thumb:hover {
+  background: #aebaca;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .history-page {
+    padding-top: 20px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+  }
+
+  .history-header h1 {
+    font-size: 29px;
+  }
+
+  .booking-count {
+    min-width: 185px;
+  }
+
+  .history-card-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-details {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+  }
+
+  .detail-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .detail-item:nth-child(3),
+  .detail-item:nth-child(4) {
+    padding-top: 10px;
+  }
+
+  .detail-item:nth-child(3) {
+    padding-left: 0;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .history-page {
+    padding: 15px 0 40px;
+  }
+
+  .history-page > .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 22px;
+  }
+
+  .history-header h1 {
+    font-size: 25px;
+  }
+
+  .history-header p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .booking-count {
+    width: 100%;
+  }
+
+  .history-card {
+    border-radius: 16px;
+  }
+
+  .history-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .service-info {
+    width: 100%;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .service-info h3 {
+    max-width: 220px;
+    font-size: 18px;
+  }
+
+  .history-status {
+    align-self: flex-start;
+  }
+
+  .history-card-body {
+    grid-template-columns: 1fr;
+    padding: 16px 18px;
+  }
+
+  .booking-details {
+    grid-template-columns: 1fr;
+    margin: 0 18px;
+    padding: 14px 0;
+  }
+
+  .detail-item,
+  .detail-item:first-child,
+  .detail-item:last-child {
+    padding: 10px 0;
+    border-right: none;
+    border-bottom: 1px solid #edf1f6;
+  }
+
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+
+  .payment-section {
+    margin: 0 18px;
+    padding: 16px 0;
+  }
+
+  .payment-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pay-button {
+    width: 100%;
+  }
+
+  .payment-success {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .view-receipt-btn {
+    width: 100%;
+  }
+
+  .history-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 18px;
+  }
+
+  .card-actions {
+    width: 100%;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .edit-button,
+  .cancel-booking-btn {
+    flex: 1;
+  }
+
+  .edit-booking-card {
+    padding: 18px;
+  }
+
+  .edit-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    width: 100%;
+  }
+
+  .history-notification {
+    top: 12px;
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .receipt-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .receipt-modal {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .receipt-modal-header,
+  .receipt-success,
+  .receipt-details,
+  .receipt-modal-footer {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .receipt-modal-header {
+    padding: 18px 0;
+  }
+
+  .receipt-success {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .receipt-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .receipt-row strong {
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .receipt-modal-footer {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .receipt-download-btn,
+  .receipt-close-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .history-header h1 {
+    font-size: 22px;
+  }
+
+  .history-card-top {
+    padding: 15px;
+  }
+
+  .history-card-body {
+    padding: 14px 15px;
+  }
+
+  .booking-details {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .payment-section {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .history-card-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .edit-button,
+  .cancel-booking-btn,
+  .cancelled-badge {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   HIVECARE REVIEW SYSTEM
+   HISTORY PAGE ONLY
+========================================================= */
+
+.history-page .review-service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #106cee, #0757c9);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.history-page .review-service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 108, 238, 0.25);
+}
+
+.history-page .review-service-btn i {
+  font-size: 14px;
+}
+
+.history-page .reviewed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: #fff8e1;
+  color: #d99400;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.history-page .reviewed-badge i {
+  color: #f5b301;
+}
+
+
+/* =========================================================
+   REVIEW OVERLAY
+========================================================= */
+
+.history-page .review-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 25, 52, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+
+/* =========================================================
+   REVIEW MODAL
+========================================================= */
+
+.history-page .review-modal {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: reviewModalIn 0.25s ease;
+}
+
+@keyframes reviewModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.history-page .review-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #475569;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-page .review-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+
+.history-page .review-modal-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #fff7df;
+  color: #f5b301;
+  font-size: 27px;
+}
+
+
+.history-page .review-modal h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+
+.history-page .review-subtitle {
+  margin: 8px 0 18px;
+  color: #718096;
+  font-size: 14px;
+}
+
+
+.history-page .review-service-name {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #eef5ff;
+  color: #106cee;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.history-page .review-stars {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 8px 0;
+}
+
+.history-page .review-stars .star {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #d9dee7;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease,
+              color 0.15s ease;
+}
+
+.history-page .review-stars .star:hover {
+  transform: scale(1.12);
+}
+
+.history-page .review-stars .star.active {
+  color: #f5b301;
+}
+
+
+.history-page .review-rating-text {
+  min-height: 22px;
+  margin-bottom: 18px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   COMMENT
+========================================================= */
+
+.history-page .review-comment {
+  width: 100%;
+  min-height: 120px;
+  padding: 14px;
+  border: 1px solid #dbe4ef;
+  border-radius: 13px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  color: #253044;
+  background: #f8fafc;
+  transition: border-color 0.2s,
+              box-shadow 0.2s;
+}
+
+.history-page .review-comment:focus {
+  border-color: #106cee;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 108, 238, 0.1);
+}
+
+
+.history-page .review-character-count {
+  margin-top: 5px;
+  text-align: right;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.history-page .submit-review-btn {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #106cee, #0757c9);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.history-page .submit-review-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 108, 238, 0.25);
+}
+
+.history-page .submit-review-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.history-page .review-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: reviewSpin 0.7s linear infinite;
+}
+
+@keyframes reviewSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .history-page .review-overlay {
+    padding: 14px;
+  }
+
+  .history-page .review-modal {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .history-page .review-modal h2 {
+    font-size: 22px;
+  }
+
+  .history-page .review-stars {
+    gap: 3px;
+  }
+
+  .history-page .review-stars .star {
+    font-size: 35px;
+  }
+
+  .history-page .review-comment {
+    min-height: 105px;
+  }
+}
+
+/* =========================================================
+   REVIEW BUTTON
+========================================================= */
+
+.review-button {
+  border: none;
+  background: #ffc107;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.review-button:hover {
+  background: #e0a800;
+  transform: translateY(-1px);
+}
+
+.reviewed-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #198754;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   REVIEW OVERLAY
+========================================================= */
+
+.review-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+
+/* =========================================================
+   REVIEW MODAL
+========================================================= */
+
+.review-modal {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: reviewModalOpen 0.2s ease-out;
+}
+
+@keyframes reviewModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   REVIEW HEADER
+========================================================= */
+
+.review-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.review-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.review-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3cd;
+  color: #ffc107;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.review-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.review-modal-header p {
+  margin: 4px 0 0;
+  color: #777777;
+  font-size: 14px;
+}
+
+.review-close {
+  border: none;
+  background: transparent;
+  color: #555555;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.review-close:hover {
+  color: #000000;
+}
+
+
+/* =========================================================
+   REVIEW BODY
+========================================================= */
+
+.review-modal-body {
+  padding: 24px;
+}
+
+.review-question {
+  margin: 0 0 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   REVIEW STARS
+========================================================= */
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.review-stars button {
+  border: none;
+  background: transparent;
+  padding: 2px;
+  font-size: 32px;
+  color: #d5d5d5;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.review-stars button:hover {
+  color: #ffc107;
+  transform: scale(1.08);
+}
+
+.review-stars button.active {
+  color: #ffc107;
+}
+
+.review-stars button:disabled {
+  cursor: not-allowed;
+}
+
+.review-rating-text {
+  margin: 0 0 16px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   REVIEW COMMENT
+========================================================= */
+
+.review-comment {
+  width: 100%;
+  min-height: 110px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 12px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.review-comment:focus {
+  border-color: #106cee;
+  box-shadow: 0 0 0 2px rgba(16, 108, 238, 0.08);
+}
+
+
+/* =========================================================
+   REVIEW ACTIONS
+========================================================= */
+
+.review-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.review-cancel-btn,
+.review-submit-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-cancel-btn {
+  background: #eeeeee;
+  color: #333333;
+}
+
+.review-cancel-btn:hover {
+  background: #dddddd;
+}
+
+.review-submit-btn {
+  background: #106cee;
+  color: #ffffff;
+}
+
+.review-submit-btn:hover:not(:disabled) {
+  background: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+.review-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .review-overlay {
+    padding: 12px;
+  }
+
+  .review-modal {
+    max-width: 100%;
+  }
+
+  .review-modal-header {
+    padding: 18px;
+  }
+
+  .review-modal-body {
+    padding: 18px;
+  }
+
+  .review-stars {
+    justify-content: center;
+  }
+
+  .review-stars button {
+    font-size: 28px;
+  }
+
+  .review-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .review-cancel-btn,
+  .review-submit-btn {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   CANCEL CONFIRMATION POPUP
+===================================================== */
+
+.cancel-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  animation: cancelOverlayFadeIn 0.2s ease;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.cancel-confirm-modal {
+  width: 100%;
+  max-width: 450px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 32px 30px 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.20);
+
+  animation: cancelModalSlideUp 0.25s ease;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.cancel-confirm-icon {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff4e5;
+
+  color: #f59e0b;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 8px 25px rgba(245, 158, 11, 0.15);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.cancel-confirm-content h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+.cancel-confirm-content p {
+  margin: 0 0 8px;
+
+  color: #374151;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.cancel-confirm-content span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.cancel-confirm-content strong {
+  color: #dc2626;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.cancel-confirm-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+.cancel-confirm-actions button {
+  flex: 1;
+
+  min-height: 46px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.cancel-confirm-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   KEEP BOOKING
+===================================================== */
+
+.cancel-confirm-no {
+  background: #f3f4f6;
+
+  color: #374151;
+
+  border: 1px solid #e5e7eb !important;
+}
+
+.cancel-confirm-no:hover:not(:disabled) {
+  background: #e5e7eb;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   YES CANCEL
+===================================================== */
+
+.cancel-confirm-yes {
+  background: #dc3545;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 18px rgba(220, 53, 69, 0.22);
+}
+
+.cancel-confirm-yes:hover:not(:disabled) {
+  background: #c82333;
+
+  box-shadow:
+    0 8px 22px rgba(220, 53, 69, 0.30);
+}
+
+
+/* =====================================================
+   DISABLED
+===================================================== */
+
+.cancel-confirm-actions button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes cancelOverlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cancelModalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .cancel-confirm-modal {
+    max-width: 100%;
+
+    padding: 27px 20px 22px;
+
+    border-radius: 18px;
+  }
+
+  .cancel-confirm-icon {
+    width: 62px;
+    height: 62px;
+
+    font-size: 26px;
+
+    margin-bottom: 16px;
+  }
+
+  .cancel-confirm-content h3 {
+    font-size: 21px;
+  }
+
+  .cancel-confirm-content p {
+    font-size: 14px;
+  }
+
+  .cancel-confirm-actions {
+    flex-direction: column;
+  }
+
+  .cancel-confirm-actions button {
+    width: 100%;
+  }
+}

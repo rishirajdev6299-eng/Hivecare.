@@ -1,0 +1,847 @@
+/* =========================================================
+   HIVECARE - PROFILE / EDIT PROFILE
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center {
+    width: 100%;
+    max-width: 100%;
+    min-height: 90vh !important;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbff 0%,
+            #eef5ff 100%
+        );
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center > .card {
+    width: 100% !important;
+    max-width: 700px !important;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: none !important;
+    border-radius: 20px !important;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12),
+        0 5px 15px rgba(15, 23, 42, 0.05) !important;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header {
+
+    width: 100%;
+
+    min-height: 210px;
+
+    padding: 30px 20px 28px;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: none !important;
+
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb 0%,
+            #3b82f6 50%,
+            #4f46e5 100%
+        ) !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   HEADER DECORATION
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -100px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+}
+
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    bottom: -90px;
+    left: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   PROFILE ICON
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header > i {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 82px;
+    height: 82px;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 auto !important;
+
+    border-radius: 50%;
+
+    font-size: 70px !important;
+
+    line-height: 1;
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =========================================================
+   MY PROFILE
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block !important;
+
+    width: 100% !important;
+
+    margin-top: 14px !important;
+
+    margin-bottom: 4px !important;
+
+    padding: 0 !important;
+
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+
+    font-weight: 800 !important;
+
+    line-height: 1.3 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+}
+
+
+/* =========================================================
+   MANAGE YOUR PERSONAL INFORMATION
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header small {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: rgba(255, 255, 255, 0.90) !important;
+
+    font-size: 13px !important;
+
+    font-weight: 500 !important;
+
+    line-height: 1.5 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   FORCE HEADER CONTENT VERTICALLY
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-header > i,
+.container.d-flex.justify-content-center.align-items-center
+.card-header > h3,
+.container.d-flex.justify-content-center.align-items-center
+.card-header > small {
+
+    flex: 0 0 auto !important;
+
+    float: none !important;
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.card-body {
+
+    width: 100%;
+
+    padding: 32px !important;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+form {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+form .row {
+
+    width: 100%;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* =========================================================
+   FORM COLUMNS
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+form .row > [class*="col-"] {
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.form-label {
+
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.form-control {
+
+    width: 100% !important;
+
+    min-height: 48px;
+
+    padding: 11px 14px;
+
+    border: 1px solid #dbe3ef !important;
+
+    border-radius: 11px !important;
+
+    background: #f8fafc !important;
+
+    color: #1e293b !important;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    outline: none;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   INPUT HOVER
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.form-control:hover {
+
+    border-color: #93c5fd !important;
+
+    background: #ffffff !important;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.form-control:focus {
+
+    border-color: #3b82f6 !important;
+
+    background: #ffffff !important;
+
+    outline: none !important;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10) !important;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.form-control::placeholder {
+
+    color: #94a3b8;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+input[type="new-password"] {
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   UPDATE BUTTON CONTAINER
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.d-grid {
+
+    width: 100%;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   UPDATE PROFILE BUTTON
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.btn-primary {
+
+    width: 100% !important;
+
+    min-height: 50px;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    padding: 12px 20px;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #4338ca
+        ) !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.30);
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.btn-primary:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================================
+   BUTTON ICON
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+.btn-primary i {
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DESKTOP FORM SPACING
+========================================================= */
+
+@media (min-width: 769px) {
+
+    .container.d-flex.justify-content-center.align-items-center
+    form .row {
+
+        row-gap: 2px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container.d-flex.justify-content-center.align-items-center {
+
+        min-height: calc(100vh - 70px) !important;
+
+        padding: 30px 16px;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    > .card {
+
+        max-width: 650px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header {
+
+        min-height: 195px;
+
+        padding: 28px 18px;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header > i {
+
+        width: 76px;
+        height: 76px;
+
+        font-size: 64px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header h3 {
+
+        font-size: 23px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header small {
+
+        font-size: 12px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-body {
+
+        padding: 26px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .container.d-flex.justify-content-center.align-items-center {
+
+        min-height: calc(100vh - 64px) !important;
+
+        padding: 20px 12px 35px;
+
+        align-items: flex-start !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    > .card {
+
+        width: 100% !important;
+
+        border-radius: 17px !important;
+    }
+
+
+    /* HEADER */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header {
+
+        min-height: 185px;
+
+        padding: 25px 15px 23px;
+
+        border-top-left-radius: 17px !important;
+
+        border-top-right-radius: 17px !important;
+    }
+
+
+    /* ICON */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header > i {
+
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 58px !important;
+    }
+
+
+    /* TITLE */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header h3 {
+
+        margin-top: 12px !important;
+
+        font-size: 21px !important;
+
+        line-height: 1.3 !important;
+    }
+
+
+    /* SUBTITLE */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header small {
+
+        font-size: 11px !important;
+
+        line-height: 1.5 !important;
+    }
+
+
+    /* BODY */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-body {
+
+        padding: 22px 17px !important;
+    }
+
+
+    /* ONE COLUMN */
+
+    .container.d-flex.justify-content-center.align-items-center
+    form .row {
+
+        display: block !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    form .row > [class*="col-"] {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding-left: 0 !important;
+
+        padding-right: 0 !important;
+    }
+
+
+    /* INPUT */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .form-control {
+
+        min-height: 47px;
+
+        font-size: 13px;
+    }
+
+
+    /* LABEL */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .form-label {
+
+        font-size: 12px;
+    }
+
+
+    /* BUTTON */
+
+    .container.d-flex.justify-content-center.align-items-center
+    .btn-primary {
+
+        min-height: 48px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .container.d-flex.justify-content-center.align-items-center {
+
+        padding: 15px 9px 30px;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    > .card {
+
+        border-radius: 15px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header {
+
+        min-height: 175px;
+
+        padding: 22px 12px;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header > i {
+
+        width: 64px;
+
+        height: 64px;
+
+        font-size: 53px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header h3 {
+
+        font-size: 19px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-header small {
+
+        font-size: 10.5px !important;
+    }
+
+
+    .container.d-flex.justify-content-center.align-items-center
+    .card-body {
+
+        padding: 19px 13px !important;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.container.d-flex.justify-content-center.align-items-center
+button:focus-visible,
+.container.d-flex.justify-content-center.align-items-center
+input:focus-visible {
+
+    outline: 2px solid #60a5fa;
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .container.d-flex.justify-content-center.align-items-center
+    * {
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}

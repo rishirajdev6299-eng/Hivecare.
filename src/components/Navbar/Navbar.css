@@ -1,0 +1,2293 @@
+/* =========================================================
+   HIVECARE PREMIUM NAVBAR
+========================================================= */
+
+:root {
+  --hc-primary: #2563eb;
+  --hc-primary-dark: #1d4ed8;
+  --hc-secondary: #7c3aed;
+  --hc-success: #10b981;
+  --hc-danger: #ef4444;
+  --hc-text: #172033;
+  --hc-muted: #667085;
+  --hc-border: rgba(15, 23, 42, 0.08);
+  --hc-white: #ffffff;
+  --hc-surface: rgba(255, 255, 255, 0.92);
+  --hc-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  --hc-shadow-large: 0 25px 70px rgba(15, 23, 42, 0.18);
+  --hc-radius: 18px;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.hc-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 255, 255, 0.91)
+    );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.hc-navbar-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.hc-navbar-container {
+  width: min(1450px, calc(100% - 42px));
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.hc-brand {
+  flex-shrink: 0;
+}
+
+.hc-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--hc-text);
+}
+
+.hc-logo-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #f5f3ff
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(37, 99, 235, 0.08),
+    0 6px 18px rgba(37, 99, 235, 0.12);
+  overflow: hidden;
+}
+
+.hc-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition:
+    transform 0.3s ease;
+}
+
+.hc-brand-link:hover .hc-logo {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.hc-brand-name {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.hc-hive {
+  color: #172033;
+}
+
+.hc-care {
+  margin-left: 1px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.hc-search-container {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  margin-left: 12px;
+}
+
+.hc-search {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  background: rgba(248, 250, 252, 0.9);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.hc-search:focus-within {
+  background: #ffffff;
+  border-color:
+    rgba(37, 99, 235, 0.35);
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.hc-search > i {
+  color: #718096;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.hc-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 10px;
+  color: var(--hc-text);
+  font-size: 14px;
+}
+
+.hc-search input::placeholder {
+  color: #98a2b3;
+}
+
+.hc-search-clear {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #667085;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hc-search-clear:hover {
+  background: #eef2f7;
+  color: #172033;
+}
+
+/* =========================================================
+   MOBILE SEARCH
+========================================================= */
+
+.hc-mobile-search {
+  display: none;
+}
+
+/* =========================================================
+   SEARCH SUGGESTIONS
+========================================================= */
+
+.hc-search-suggestions,
+.hc-search-no-result {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border:
+    1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--hc-shadow-large);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation:
+    hc-dropdown-in 0.2s ease;
+}
+
+@keyframes hc-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hc-search-suggestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: var(--hc-text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.hc-search-suggestion:hover {
+  background: #f8fafc;
+  padding-left: 18px;
+}
+
+.hc-suggestion-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: var(--hc-primary);
+}
+
+.hc-search-suggestion span {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hc-search-suggestion > i:last-child {
+  color: #98a2b3;
+}
+
+.hc-search-no-result {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  color: var(--hc-muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.hc-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.hc-nav-link {
+  position: relative;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: #475467;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hc-nav-link i {
+  font-size: 15px;
+}
+
+.hc-nav-link:hover {
+  color: var(--hc-primary);
+  background:
+    rgba(37, 99, 235, 0.07);
+  transform: translateY(-1px);
+}
+
+.hc-special-link {
+  color: #4338ca;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.08),
+      rgba(124, 58, 237, 0.08)
+    );
+}
+
+.hc-special-link:hover {
+  color: #3730a3;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.14),
+      rgba(124, 58, 237, 0.14)
+    );
+}
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.hc-support-nav-btn {
+  font-family: inherit;
+}
+
+.hc-support-nav-btn i {
+  color: var(--hc-primary);
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.hc-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   DESKTOP ACCOUNT
+========================================================= */
+
+.hc-desktop-account {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================================
+   AUTH BUTTONS
+========================================================= */
+
+.hc-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.hc-login-btn,
+.hc-register-btn {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.hc-login-btn {
+  color: #344054;
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.hc-login-btn:hover {
+  color: var(--hc-primary);
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.hc-register-btn {
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  border: 1px solid transparent;
+  box-shadow:
+    0 7px 20px rgba(37, 99, 235, 0.22);
+}
+
+.hc-register-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow:
+    0 11px 26px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.hc-profile-wrapper {
+  position: relative;
+}
+
+.hc-profile-btn {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 9px 4px 5px;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 15px;
+  background:
+    rgba(255, 255, 255, 0.88);
+  color: var(--hc-text);
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hc-profile-btn:hover,
+.hc-profile-active {
+  border-color:
+    rgba(37, 99, 235, 0.18);
+  box-shadow:
+    0 8px 22px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.hc-user-avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 11px;
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #ede9fe
+    );
+  color: var(--hc-primary);
+  font-size: 18px;
+}
+
+.hc-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hc-clickable-avatar {
+  cursor: zoom-in;
+}
+
+.hc-user-name {
+  max-width: 125px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hc-profile-btn > i {
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MOBILE ACCOUNT
+========================================================= */
+
+.hc-mobile-account {
+  display: none;
+}
+
+/* =========================================================
+   MOBILE MENU TOGGLE
+========================================================= */
+
+.hc-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 19px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hc-menu-toggle:hover,
+.hc-menu-toggle.open {
+  background: #eff6ff;
+  color: var(--hc-primary);
+}
+
+/* =========================================================
+   PROFILE DROPDOWN - DESKTOP
+========================================================= */
+
+.hc-profile-dropdown {
+  position: fixed;
+  top: 88px;
+  right: max(21px, calc((100vw - 1450px) / 2));
+  z-index: 1100;
+  width: 340px;
+  overflow: hidden;
+  border:
+    1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background:
+    rgba(255, 255, 255, 0.98);
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  animation:
+    hc-profile-in 0.25s ease;
+}
+
+@keyframes hc-profile-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hc-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+}
+
+.hc-profile-avatar-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hc-profile-avatar-large {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 19px;
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #ede9fe
+    );
+  color: var(--hc-primary);
+  font-size: 29px;
+  box-shadow:
+    inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+.hc-profile-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.hc-profile-image-upload {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  color: #ffffff;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+.hc-profile-name-section {
+  min-width: 0;
+}
+
+.hc-profile-name-section h4 {
+  margin: 0 0 8px;
+  overflow: hidden;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hc-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--hc-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.hc-profile-divider {
+  height: 1px;
+  margin: 0 20px;
+  background:
+    rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   PROFILE DETAILS
+========================================================= */
+
+.hc-profile-details {
+  padding: 12px 20px;
+}
+
+.hc-profile-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.hc-detail-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.hc-detail-icon.email {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.hc-detail-icon.phone {
+  background: #ecfdf3;
+  color: #059669;
+}
+
+.hc-detail-icon.address {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.hc-detail-icon.service {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.hc-profile-detail > div {
+  min-width: 0;
+}
+
+.hc-profile-detail small {
+  display: block;
+  margin-bottom: 2px;
+  color: #98a2b3;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hc-profile-detail p {
+  max-width: 225px;
+  margin: 0;
+  overflow: hidden;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   PROFILE ACTIONS
+========================================================= */
+
+.hc-profile-actions {
+  padding: 12px 14px 14px;
+}
+
+.hc-profile-action,
+.hc-profile-logout {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 9px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: #344054;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hc-profile-action:hover {
+  background: #f8fafc;
+  color: var(--hc-primary);
+}
+
+.hc-profile-logout {
+  color: #dc2626;
+}
+
+.hc-profile-logout:hover {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.hc-profile-logout:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hc-action-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.hc-profile-action .hc-action-icon {
+  color: var(--hc-primary);
+}
+
+.hc-profile-logout .hc-action-icon {
+  color: #dc2626;
+}
+
+.hc-profile-action span,
+.hc-profile-logout span {
+  flex: 1;
+  text-align: left;
+}
+
+/* =========================================================
+   CHAT OVERLAY
+========================================================= */
+
+.hc-chat-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 25px;
+  background:
+    rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation:
+    hc-overlay-in 0.2s ease;
+}
+
+@keyframes hc-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   CHAT WINDOW
+========================================================= */
+
+.hc-chat-window {
+  width: min(410px, calc(100vw - 30px));
+  height: min(650px, calc(100vh - 50px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow:
+    0 30px 90px rgba(15, 23, 42, 0.28);
+  animation:
+    hc-chat-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes hc-chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   CHAT HEADER
+========================================================= */
+
+.hc-chat-header {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background:
+    linear-gradient(
+      135deg,
+      #1d4ed8,
+      #4f46e5 55%,
+      #7c3aed
+    );
+  color: #ffffff;
+}
+
+.hc-chat-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hc-chat-avatar {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background:
+    rgba(255, 255, 255, 0.17);
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+  font-size: 21px;
+}
+
+.hc-online-dot {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.hc-chat-brand h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.hc-chat-brand span {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+}
+
+.hc-chat-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 11px;
+  background:
+    rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hc-chat-close:hover {
+  background:
+    rgba(255, 255, 255, 0.22);
+  transform: rotate(4deg);
+}
+
+.hc-chat-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   CHAT BODY
+========================================================= */
+
+.hc-chat-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px 16px;
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc,
+      #ffffff
+    );
+  scroll-behavior: smooth;
+}
+
+.hc-chat-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.hc-chat-body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cbd5e1;
+}
+
+/* =========================================================
+   CHAT MESSAGE
+========================================================= */
+
+.hc-chat-message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.hc-chat-user-row {
+  justify-content: flex-end;
+}
+
+.hc-chat-bot-row {
+  justify-content: flex-start;
+}
+
+.hc-message-avatar {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #ede9fe
+    );
+  color: var(--hc-primary);
+  font-size: 13px;
+}
+
+.hc-chat-message {
+  max-width: 78%;
+  padding: 11px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.hc-chat-bot-message {
+  border:
+    1px solid rgba(15, 23, 42, 0.06);
+  border-bottom-left-radius: 5px;
+  background: #ffffff;
+  color: #344054;
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.hc-chat-user-message {
+  border-bottom-right-radius: 5px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  color: #ffffff;
+  box-shadow:
+    0 5px 16px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================================================
+   TYPING
+========================================================= */
+
+.hc-typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 55px;
+  padding: 13px 14px;
+}
+
+.hc-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  animation:
+    hc-typing 1.2s infinite ease-in-out;
+}
+
+.hc-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.hc-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes hc-typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   QUICK QUESTIONS
+========================================================= */
+
+.hc-quick-questions {
+  display: flex;
+  gap: 7px;
+  padding: 10px 14px;
+  overflow-x: auto;
+  border-top:
+    1px solid rgba(15, 23, 42, 0.06);
+  background: #ffffff;
+  scrollbar-width: none;
+}
+
+.hc-quick-questions::-webkit-scrollbar {
+  display: none;
+}
+
+.hc-quick-questions button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  border:
+    1px solid rgba(37, 99, 235, 0.13);
+  border-radius: 999px;
+  background: #f8fbff;
+  color: var(--hc-primary);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hc-quick-questions button:hover {
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CHAT INPUT
+========================================================= */
+
+.hc-chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top:
+    1px solid rgba(15, 23, 42, 0.07);
+  background: #ffffff;
+}
+
+.hc-chat-input-area input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 14px;
+  border:
+    1px solid rgba(15, 23, 42, 0.09);
+  border-radius: 13px;
+  outline: none;
+  background: #f8fafc;
+  color: #172033;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.hc-chat-input-area input:focus {
+  background: #ffffff;
+  border-color:
+    rgba(37, 99, 235, 0.35);
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.07);
+}
+
+.hc-chat-input-area input::placeholder {
+  color: #98a2b3;
+}
+
+.hc-chat-input-area button {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 13px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.hc-chat-input-area button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 9px 20px rgba(37, 99, 235, 0.28);
+}
+
+.hc-chat-input-area button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================================
+   CHAT FOOTER
+========================================================= */
+
+.hc-chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+  color: #98a2b3;
+  background: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   PROFILE IMAGE MODAL
+========================================================= */
+
+.hc-profile-image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation:
+    hc-overlay-in 0.2s ease;
+}
+
+.hc-profile-image-preview {
+  position: relative;
+  max-width: 520px;
+  max-height: 85vh;
+  padding: 12px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.35);
+}
+
+.hc-profile-image-preview img {
+  display: block;
+  max-width: min(480px, 80vw);
+  max-height: 70vh;
+  border-radius: 17px;
+  object-fit: contain;
+}
+
+.hc-profile-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background:
+    rgba(15, 23, 42, 0.72);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hc-profile-image-change {
+  min-height: 42px;
+  margin: 12px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: fit-content;
+  padding: 0 15px;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--hc-primary),
+      var(--hc-secondary)
+    );
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.hc-notification {
+  position: fixed;
+  top: 92px;
+  right: 24px;
+  z-index: 5000;
+  width: min(390px, calc(100vw - 32px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 17px;
+  background:
+    rgba(255, 255, 255, 0.97);
+  box-shadow:
+    0 18px 50px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation:
+    hc-notification-in 0.3s ease;
+}
+
+@keyframes hc-notification-in {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hc-notification-success {
+  border-left:
+    4px solid var(--hc-success);
+}
+
+.hc-notification-error {
+  border-left:
+    4px solid var(--hc-danger);
+}
+
+.hc-notification-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+.hc-notification-success .hc-notification-icon {
+  background: #ecfdf3;
+  color: #059669;
+}
+
+.hc-notification-error .hc-notification-icon {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.hc-notification-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hc-notification-content strong {
+  color: #172033;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hc-notification-content span {
+  overflow: hidden;
+  color: #667085;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hc-notification-close {
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #98a2b3;
+  cursor: pointer;
+}
+
+.hc-notification-close:hover {
+  background: #f2f4f7;
+  color: #344054;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+  .hc-navbar-container {
+    width: calc(100% - 28px);
+    gap: 15px;
+  }
+
+  .hc-search-container {
+    max-width: 310px;
+  }
+
+  .hc-nav-link {
+    padding: 0 9px;
+  }
+
+  .hc-nav-link span {
+    font-size: 13px;
+  }
+
+  .hc-user-name {
+    max-width: 90px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 950px) {
+  .hc-search-container {
+    max-width: 240px;
+  }
+
+  .hc-nav-link span {
+    display: none;
+  }
+
+  .hc-nav-link {
+    width: 40px;
+    padding: 0;
+  }
+
+  .hc-nav-link i {
+    font-size: 17px;
+  }
+
+  .hc-special-link {
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .hc-special-link span {
+    display: inline;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 780px) {
+
+  /* -------------------------------------------------------
+     NAVBAR
+  ------------------------------------------------------- */
+
+  .hc-navbar {
+    z-index: 1500;
+  }
+
+  .hc-navbar-container {
+    width: calc(100% - 18px);
+    min-height: 70px;
+    position: relative;
+    gap: 8px;
+  }
+
+  /* -------------------------------------------------------
+     LOGO
+  ------------------------------------------------------- */
+
+  .hc-logo-wrapper {
+    width: 43px;
+    height: 43px;
+  }
+
+  .hc-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hc-brand-name {
+    font-size: 21px;
+  }
+
+  /* -------------------------------------------------------
+     HIDE DESKTOP SEARCH
+  ------------------------------------------------------- */
+
+  .hc-desktop-search {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     RIGHT SIDE
+     
+     IMPORTANT:
+     On mobile this contains ONLY hamburger.
+     No profile.
+     No login.
+     No register.
+  ------------------------------------------------------- */
+
+  .hc-navbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .hc-desktop-account {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     HAMBURGER
+  ------------------------------------------------------- */
+
+  .hc-menu-toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1700;
+  }
+
+  .hc-menu-toggle:active {
+    transform: scale(0.96);
+  }
+
+  /* -------------------------------------------------------
+     MOBILE MENU PANEL
+  ------------------------------------------------------- */
+
+  .hc-nav-links {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 1600;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+
+    max-height: calc(100vh - 82px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 12px;
+
+    border:
+      1px solid rgba(15, 23, 42, 0.08);
+
+    border-radius: 20px;
+
+    background:
+      rgba(255, 255, 255, 0.98);
+
+    box-shadow:
+      0 24px 65px rgba(15, 23, 42, 0.18);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    margin: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-8px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+
+    /* Keep the interactive panel above page content. */
+    isolation: isolate;
+  }
+
+  .hc-nav-links.hc-nav-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+
+    animation:
+      hc-dropdown-in 0.2s ease;
+  }
+
+  /* -------------------------------------------------------
+     MOBILE SEARCH
+  ------------------------------------------------------- */
+
+  .hc-mobile-search {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .hc-mobile-search .hc-search {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+  }
+
+  .hc-mobile-search .hc-search-suggestions,
+  .hc-mobile-search .hc-search-no-result {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 7px;
+    width: 100%;
+    max-height: 230px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    box-shadow:
+      0 10px 30px rgba(15, 23, 42, 0.09);
+  }
+
+  /* -------------------------------------------------------
+     NAV LINKS
+  ------------------------------------------------------- */
+
+  .hc-nav-link,
+  .hc-special-link {
+    width: 100%;
+    min-height: 50px;
+    justify-content: flex-start;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .hc-nav-link span,
+  .hc-special-link span {
+    display: inline;
+    font-size: 14px;
+  }
+
+  .hc-nav-link i {
+    width: 22px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .hc-special-link {
+    justify-content: flex-start;
+  }
+
+  /* -------------------------------------------------------
+     MOBILE ACCOUNT AREA
+  ------------------------------------------------------- */
+
+  .hc-mobile-account {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 7px;
+    border-top:
+      1px solid rgba(15, 23, 42, 0.07);
+  }
+
+  /* -------------------------------------------------------
+     MOBILE PROFILE HEADER
+  ------------------------------------------------------- */
+
+  .hc-mobile-profile-trigger {
+    width: 100%;
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 10px;
+
+    border:
+      1px solid rgba(15, 23, 42, 0.07);
+
+    border-radius: 15px;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(239, 246, 255, 0.95),
+        rgba(245, 243, 255, 0.95)
+      );
+
+    color: var(--hc-text);
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .hc-mobile-profile-trigger:hover,
+  .hc-mobile-profile-trigger-active {
+    border-color:
+      rgba(37, 99, 235, 0.18);
+
+    background:
+      linear-gradient(
+        135deg,
+        #eff6ff,
+        #f5f3ff
+      );
+
+    box-shadow:
+      0 7px 20px rgba(37, 99, 235, 0.08);
+  }
+
+  .hc-mobile-profile-avatar {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background:
+      linear-gradient(
+        135deg,
+        #eff6ff,
+        #ede9fe
+      );
+
+    color: var(--hc-primary);
+
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .hc-mobile-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hc-mobile-profile-info {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hc-mobile-profile-info strong {
+    max-width: 100%;
+
+    overflow: hidden;
+
+    color: #172033;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .hc-mobile-profile-info span {
+    display: inline-flex;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    color: var(--hc-primary);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  .hc-mobile-profile-trigger > i {
+    flex-shrink: 0;
+
+    color: #98a2b3;
+
+    font-size: 12px;
+  }
+
+  /* -------------------------------------------------------
+     MOBILE PROFILE PANEL
+  ------------------------------------------------------- */
+
+  .hc-mobile-profile-panel {
+    width: 100%;
+    margin-top: 7px;
+
+    overflow: hidden;
+
+    border:
+      1px solid rgba(15, 23, 42, 0.07);
+
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 10px 30px rgba(15, 23, 42, 0.08);
+
+    animation:
+      hc-profile-in 0.2s ease;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-top {
+    padding: 16px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-avatar-large {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    font-size: 24px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-name-section h4 {
+    font-size: 16px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-details {
+    padding: 8px 16px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-detail {
+    padding: 8px 0;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-detail p {
+    max-width: calc(100vw - 145px);
+  }
+
+  .hc-mobile-profile-panel .hc-profile-divider {
+    margin: 0 16px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-actions {
+    padding: 9px 10px 11px;
+  }
+
+  /* -------------------------------------------------------
+     MOBILE AUTH
+  ------------------------------------------------------- */
+
+  .hc-mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .hc-mobile-auth-btn {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .hc-mobile-login {
+    border:
+      1px solid rgba(15, 23, 42, 0.08);
+
+    background: #ffffff;
+
+    color: #344054;
+  }
+
+  .hc-mobile-login:hover {
+    background: #f8fafc;
+    color: var(--hc-primary);
+  }
+
+  .hc-mobile-register {
+    border: none;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--hc-primary),
+        var(--hc-secondary)
+      );
+
+    color: #ffffff;
+
+    box-shadow:
+      0 7px 20px rgba(37, 99, 235, 0.2);
+  }
+
+  .hc-mobile-register:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  /* -------------------------------------------------------
+     DESKTOP PROFILE DROPDOWN MUST NOT SHOW ON MOBILE
+  ------------------------------------------------------- */
+
+  .hc-desktop-profile-dropdown {
+    display: none !important;
+  }
+
+  /* -------------------------------------------------------
+     CHAT
+  ------------------------------------------------------- */
+
+  .hc-chat-overlay {
+    padding: 12px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hc-chat-window {
+    width: 100%;
+    height: min(650px, calc(100vh - 24px));
+    border-radius: 22px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .hc-navbar-container {
+    width: calc(100% - 12px);
+    min-height: 66px;
+    gap: 7px;
+  }
+
+  .hc-brand-name {
+    font-size: 19px;
+  }
+
+  .hc-logo-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .hc-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hc-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hc-nav-links {
+    top: calc(100% + 7px);
+    max-height: calc(100vh - 75px);
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .hc-mobile-profile-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .hc-mobile-profile-info strong {
+    font-size: 13px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-top {
+    padding: 14px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-avatar-large {
+    width: 54px;
+    height: 54px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-name-section h4 {
+    font-size: 15px;
+  }
+
+  .hc-mobile-profile-panel .hc-profile-detail p {
+    max-width: calc(100vw - 135px);
+  }
+
+  .hc-chat-window {
+    height: calc(100vh - 20px);
+    border-radius: 20px;
+  }
+
+  .hc-chat-header {
+    min-height: 70px;
+  }
+
+  .hc-chat-message {
+    max-width: 84%;
+    font-size: 12px;
+  }
+
+  .hc-quick-questions button {
+    font-size: 9px;
+  }
+
+  .hc-notification {
+    top: 80px;
+    right: 10px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hc-brand-name {
+    font-size: 17px;
+  }
+
+  .hc-logo-wrapper {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hc-logo {
+    width: 31px;
+    height: 31px;
+  }
+
+  .hc-menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hc-nav-links {
+    padding: 8px;
+  }
+
+  .hc-nav-link,
+  .hc-special-link {
+    min-height: 46px;
+    padding: 0 12px;
+  }
+
+  .hc-nav-link span,
+  .hc-special-link span {
+    font-size: 13px;
+  }
+
+  .hc-mobile-profile-trigger {
+    min-height: 60px;
+  }
+
+  .hc-mobile-profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hc-navbar,
+  .hc-nav-link,
+  .hc-profile-btn,
+  .hc-chat-window,
+  .hc-notification,
+  .hc-search-suggestions,
+  .hc-profile-dropdown,
+  .hc-mobile-profile-panel,
+  .hc-nav-links {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE PROFILE MODE
+   ========================================================= */
+
+@media (max-width: 780px) {
+
+  /* Hide normal menu content when profile is opened */
+
+  .hc-nav-links.hc-mobile-profile-mode
+    > .hc-mobile-search {
+    display: none !important;
+  }
+
+  .hc-nav-links.hc-mobile-profile-mode
+    > .hc-nav-link {
+    display: none !important;
+  }
+
+  /* Profile section becomes the only menu content */
+
+  .hc-nav-links.hc-mobile-profile-mode
+    .hc-mobile-account {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  /* Profile trigger is replaced by profile panel */
+
+  .hc-nav-links.hc-mobile-profile-mode
+    .hc-mobile-profile-trigger {
+    display: none;
+  }
+
+  /* Back button */
+
+  .hc-mobile-profile-back {
+    width: 100%;
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 8px;
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f8fafc;
+    color: #344054;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .hc-mobile-profile-back:hover {
+    background: #eff6ff;
+    color: var(--hc-primary);
+  }
+
+  .hc-mobile-profile-back:active {
+    transform: scale(0.98);
+  }
+
+  .hc-mobile-profile-back i {
+    font-size: 15px;
+  }
+
+  /* Profile panel */
+
+  .hc-nav-links.hc-mobile-profile-mode
+    .hc-mobile-profile-panel {
+    width: 100%;
+    margin-top: 0;
+  }
+
+}

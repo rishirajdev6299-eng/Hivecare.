@@ -1,0 +1,1039 @@
+/* =====================================================
+   HIVECARE REGISTER PAGE
+   All classes are uniquely prefixed.
+   This CSS will NOT affect Home/Navbar/Footer.
+===================================================== */
+
+.hive-register-page {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.12),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(79, 70, 229, 0.10),
+      transparent 35%
+    ),
+    #f5f8ff;
+}
+
+
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
+
+.hive-register-wrapper {
+  width: 100%;
+  max-width: 1080px;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  background: #ffffff;
+
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5eaf2;
+
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.13);
+}
+
+
+/* =====================================================
+   LEFT SECTION
+===================================================== */
+
+.hive-register-intro {
+  position: relative;
+
+  padding: 50px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #172554 0%,
+      #1e3a8a 45%,
+      #2563eb 100%
+    );
+}
+
+
+.hive-register-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  top: -120px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+
+.hive-register-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  bottom: -80px;
+  left: -70px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.hive-register-logo {
+  position: relative;
+  z-index: 2;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.25);
+
+  font-size: 29px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   INTRO HEADING
+===================================================== */
+
+.hive-register-intro h1 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 16px;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.hive-register-intro h1 span {
+  color: #93c5fd;
+}
+
+
+.hive-register-intro > p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 400px;
+
+  margin: 0 0 35px;
+
+  color:
+    rgba(255, 255, 255, 0.80);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.hive-register-features {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.hive-register-feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.hive-register-feature-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  color: #bfdbfe;
+
+  font-weight: 800;
+}
+
+
+.hive-register-feature strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+}
+
+
+.hive-register-feature small {
+  display: block;
+
+  color:
+    rgba(255, 255, 255, 0.63);
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.hive-register-quote {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 38px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+.hive-register-quote span {
+  color: #93c5fd;
+
+  font-size: 25px;
+
+  margin-right: 5px;
+}
+
+
+/* =====================================================
+   REGISTER CARD
+===================================================== */
+
+.hive-register-card {
+  padding: 45px 55px;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.hive-register-heading {
+  margin-bottom: 25px;
+}
+
+
+.hive-register-badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  margin-bottom: 10px;
+
+  border-radius: 30px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.hive-register-heading h2 {
+  margin: 0 0 7px;
+
+  color: #0f172a;
+
+  font-size: 29px;
+
+  font-weight: 800;
+}
+
+
+.hive-register-heading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   GENERAL ERROR
+===================================================== */
+
+.hive-register-error {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 13px;
+
+  margin-bottom: 17px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.hive-register-field {
+  margin-bottom: 14px;
+}
+
+
+.hive-register-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #334155;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.hive-register-input {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+.hive-register-input > span {
+  position: absolute;
+
+  left: 14px;
+
+  z-index: 2;
+
+  font-size: 14px;
+
+  pointer-events: none;
+
+  opacity: 0.75;
+}
+
+
+.hive-register-input input {
+  width: 100%;
+
+  height: 45px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 42px;
+
+  border:
+    1px solid #dbe3ef;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.hive-register-input input::placeholder {
+  color: #94a3b8;
+}
+
+
+.hive-register-input input:focus {
+  border-color: #3b82f6;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(59, 130, 246, 0.10);
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.hive-register-textarea {
+  position: relative;
+
+  display: flex;
+}
+
+
+.hive-register-textarea > span {
+  position: absolute;
+
+  top: 12px;
+  left: 14px;
+
+  z-index: 2;
+
+  font-size: 14px;
+
+  opacity: 0.75;
+
+  pointer-events: none;
+}
+
+
+.hive-register-textarea textarea {
+  width: 100%;
+
+  min-height: 65px;
+
+  resize: vertical;
+
+  box-sizing: border-box;
+
+  padding:
+    11px 14px 11px 42px;
+
+  border:
+    1px solid #dbe3ef;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.hive-register-textarea textarea::placeholder {
+  color: #94a3b8;
+}
+
+
+.hive-register-textarea textarea:focus {
+  border-color: #3b82f6;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(59, 130, 246, 0.10);
+}
+
+
+/* =====================================================
+   EMAIL ERROR
+===================================================== */
+
+.hive-register-email-error {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #dc2626;
+
+  font-size: 11px;
+}
+
+
+.hive-register-input-error input {
+  border-color: #ef4444;
+}
+
+
+/* =====================================================
+   PASSWORD TOGGLE
+===================================================== */
+
+.hive-register-password-toggle {
+  position: absolute;
+
+  right: 8px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+
+.hive-register-password-toggle:hover {
+  background: #eaf2ff;
+}
+
+
+/* =====================================================
+   CREATE ACCOUNT BUTTON
+===================================================== */
+
+.hive-register-button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 7px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 22px
+    rgba(37, 99, 235, 0.23);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.hive-register-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 27px
+    rgba(37, 99, 235, 0.30);
+}
+
+
+.hive-register-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+.hive-register-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.hive-register-arrow {
+  font-size: 19px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.hive-register-button:hover
+.hive-register-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   SPINNER
+===================================================== */
+
+.hive-register-spinner {
+  width: 16px;
+  height: 16px;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.4);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation:
+    hiveRegisterSpin
+    0.7s linear infinite;
+}
+
+
+@keyframes hiveRegisterSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.hive-register-login {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 19px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+.hive-register-login a {
+  color: #2563eb;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.hive-register-login a:hover {
+  color: #1d4ed8;
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.hive-register-security {
+  margin-top: 17px;
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid #edf1f7;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .hive-register-wrapper {
+    max-width: 700px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .hive-register-intro {
+    padding: 38px 40px;
+  }
+
+  .hive-register-intro h1 {
+    font-size: 34px;
+  }
+
+  .hive-register-features {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+
+  .hive-register-feature {
+    flex: 1 1 200px;
+  }
+
+  .hive-register-quote {
+    display: none;
+  }
+
+  .hive-register-card {
+    padding: 40px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .hive-register-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 20px 12px;
+  }
+
+  .hive-register-wrapper {
+    border-radius: 20px;
+  }
+
+  .hive-register-intro {
+    padding: 30px 24px;
+  }
+
+  .hive-register-logo {
+    width: 50px;
+    height: 50px;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+  }
+
+  .hive-register-intro h1 {
+    font-size: 28px;
+  }
+
+  .hive-register-intro > p {
+    font-size: 13px;
+
+    margin-bottom: 0;
+  }
+
+  .hive-register-features {
+    display: none;
+  }
+
+  .hive-register-card {
+    padding: 30px 22px;
+  }
+
+  .hive-register-heading h2 {
+    font-size: 26px;
+  }
+
+}
+/* =========================================
+   REGISTER NOTIFICATION
+========================================= */
+
+.hive-register-notification {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  min-width: 340px;
+  max-width: 450px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.15);
+
+  z-index: 9999;
+
+  animation:
+    hiveNotificationSlide 0.4s ease;
+}
+
+
+/* SUCCESS */
+
+.hive-register-notification.success {
+  border-left: 5px solid #22c55e;
+}
+
+
+/* ERROR */
+
+.hive-register-notification.error {
+  border-left: 5px solid #ef4444;
+}
+
+
+/* ICON */
+
+.hive-notification-icon {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.hive-register-notification.success
+.hive-notification-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+
+.hive-register-notification.error
+.hive-notification-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* CONTENT */
+
+.hive-notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  flex: 1;
+}
+
+
+.hive-notification-content strong {
+  font-size: 15px;
+  color: #1f2937;
+}
+
+
+.hive-notification-content span {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+
+/* CLOSE BUTTON */
+
+.hive-notification-close {
+  border: none;
+  background: transparent;
+
+  font-size: 24px;
+
+  color: #9ca3af;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+
+.hive-notification-close:hover {
+  color: #374151;
+}
+
+
+/* ANIMATION */
+
+@keyframes hiveNotificationSlide {
+
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hive-register-notification {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+
+    min-width: auto;
+    max-width: none;
+  }
+
+}

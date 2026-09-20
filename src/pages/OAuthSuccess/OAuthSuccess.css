@@ -1,0 +1,376 @@
+
+/* =========================================================
+   HIVECARE OAUTH SUCCESS PAGE
+   ========================================================= */
+
+.oauth-success-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37, 99, 235, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(14, 165, 233, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef5ff 50%,
+      #f8fbff 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+   ========================================================= */
+
+.oauth-success-page::before {
+  content: "";
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.08);
+
+  top: -150px;
+  left: -100px;
+}
+
+.oauth-success-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(14, 165, 233, 0.08);
+
+  bottom: -200px;
+  right: -150px;
+}
+
+
+/* =========================================================
+   SUCCESS CARD
+   ========================================================= */
+
+.oauth-success-card {
+  width: 100%;
+  max-width: 480px;
+
+  padding: 55px 45px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, 0.12),
+    0 10px 30px rgba(37, 99, 235, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  position: relative;
+
+  z-index: 2;
+
+  animation: oauthCardAppear 0.6s ease forwards;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+   ========================================================= */
+
+.oauth-success-icon {
+  width: 86px;
+  height: 86px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #0ea5e9
+  );
+
+  color: #ffffff;
+
+  font-size: 38px;
+
+  box-shadow:
+    0 15px 35px rgba(37, 99, 235, 0.30);
+
+  animation: successPop 0.65s ease;
+}
+
+
+.oauth-success-icon i {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.oauth-success-spinner {
+  width: 28px;
+  height: 28px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  border: 3px solid #dbeafe;
+
+  border-top-color: #2563eb;
+
+  animation: oauthSpin 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.oauth-success-card h2 {
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   MAIN TEXT
+   ========================================================= */
+
+.oauth-success-card p {
+  margin: 0 0 8px;
+
+  color: #475569;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECONDARY TEXT
+   ========================================================= */
+
+.oauth-success-card span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================================
+   ERROR ICON
+   ========================================================= */
+
+.oauth-error-icon {
+  width: 86px;
+  height: 86px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #f97316
+  );
+
+  color: #ffffff;
+
+  font-size: 34px;
+
+  box-shadow:
+    0 15px 35px rgba(239, 68, 68, 0.25);
+
+  animation: errorPop 0.6s ease;
+}
+
+
+.oauth-error-icon i {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ERROR HEADING
+   ========================================================= */
+
+.oauth-error-icon + h2 {
+  color: #991b1b;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes oauthCardAppear {
+
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+@keyframes successPop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes errorPop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes oauthSpin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .oauth-success-page {
+    padding: 20px;
+  }
+
+  .oauth-success-card {
+    padding: 42px 25px;
+
+    border-radius: 23px;
+  }
+
+  .oauth-success-icon,
+  .oauth-error-icon {
+    width: 75px;
+    height: 75px;
+
+    font-size: 30px;
+  }
+
+  .oauth-success-card h2 {
+    font-size: 25px;
+  }
+
+  .oauth-success-card p {
+    font-size: 15px;
+  }
+
+  .oauth-success-card span {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .oauth-success-card {
+    padding: 35px 20px;
+  }
+
+  .oauth-success-card h2 {
+    font-size: 23px;
+  }
+
+}
+

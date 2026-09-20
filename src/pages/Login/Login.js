@@ -391,9 +391,8 @@ function Login() {
      * /oauth2/authorization/facebook
      */
 
-    const backendUrl =
-      process.env.REACT_APP_API_URL ||
-      "http://localhost:8080";
+    const backendUrl ="https://hivecare-b.onrender.com"
+      
 
     const oauthUrl =
       `${backendUrl}/oauth2/authorization/${provider}`;

@@ -1,5 +1,3 @@
-
-
 /* =========================================================
 HIVECARE SERVICES PAGE
 MEDIUM SERVICE CARDS
@@ -265,10 +263,13 @@ transform: scale(0.7);
 opacity: 0.4;
 }
 
+
 40% {
-transform: scale(1);
-opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
+
+
 }
 
 .services-page .services-loading h5 {
@@ -309,10 +310,13 @@ opacity: 0;
 transform: translateY(15px);
 }
 
+
 to {
-opacity: 1;
-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
+
+
 }
 
 /* =========================================================
@@ -325,20 +329,14 @@ width: 100%;
 height: 390px;
 min-height: 390px;
 max-height: 390px;
-
 display: flex;
 flex-direction: column;
-
 padding: 20px;
-
 background: #ffffff;
 border: 1px solid #e0ebf5;
 border-radius: 20px;
-
 overflow: hidden;
-
 box-shadow: 0 10px 35px rgba(39, 102, 145, 0.06);
-
 transition:
 transform 0.3s ease,
 box-shadow 0.3s ease,
@@ -437,19 +435,14 @@ CARD CONTENT
 position: relative;
 z-index: 3;
 width: 100%;
-
 height: 185px;
 min-height: 185px;
 max-height: 185px;
-
 flex: 0 0 185px;
-
 display: flex;
 flex-direction: column;
-
 margin: 0;
 padding: 0;
-
 overflow: visible;
 }
 
@@ -463,18 +456,14 @@ NESTED SERVICE CARD
 width: 100%;
 height: 100%;
 min-height: 0;
-
 display: flex;
 flex-direction: column;
-
 margin: 0;
 padding: 0;
-
 background: transparent;
 border: none;
 border-radius: 0;
 box-shadow: none;
-
 overflow: visible;
 }
 
@@ -499,20 +488,14 @@ TITLE
 h5 {
 flex-shrink: 0;
 width: 100%;
-
 margin: 10px 0 8px;
 padding: 0;
-
 color: #173653;
-
 font-size: 23px;
 line-height: 29px;
 font-weight: 800;
-
 letter-spacing: -0.3px;
-
 overflow: hidden;
-
 display: -webkit-box;
 -webkit-line-clamp: 1;
 -webkit-box-orient: vertical;
@@ -527,24 +510,17 @@ DESCRIPTION
 .service-card
 p {
 flex-shrink: 0;
-
 width: 100%;
 height: 48px;
 min-height: 48px;
 max-height: 48px;
-
 margin: 0;
 padding: 0;
-
 color: #7890aa;
-
 font-size: 14px;
 line-height: 23px;
-
 font-weight: 400;
-
 overflow: hidden;
-
 display: -webkit-box;
 -webkit-line-clamp: 2;
 -webkit-box-orient: vertical;
@@ -559,50 +535,35 @@ BOOK BUTTON
 .service-card
 .service-book-btn {
 width: 100%;
-
 height: 52px;
 min-height: 52px;
 max-height: 52px;
-
 flex-shrink: 0;
-
 display: flex !important;
 align-items: center !important;
 justify-content: center !important;
-
 margin-top: auto !important;
 margin-bottom: 0 !important;
-
 padding: 0 18px !important;
-
 position: relative;
 z-index: 10;
-
 border: none;
 border-radius: 13px;
-
 background: linear-gradient(
 90deg,
 #118bd7 0%,
 #2caee8 100%
 );
-
 color: #ffffff;
-
 font-size: 15px;
 line-height: 1;
 font-weight: 750;
-
 text-decoration: none;
 cursor: pointer;
-
 box-shadow: 0 10px 22px rgba(24, 143, 216, 0.18);
-
 visibility: visible !important;
 opacity: 1 !important;
-
 box-sizing: border-box;
-
 transition:
 transform 0.25s ease,
 box-shadow 0.25s ease,
@@ -615,16 +576,12 @@ filter 0.25s ease;
 .service-book-btn
 span {
 display: inline-block !important;
-
 margin: 0 !important;
 padding: 0 !important;
-
 color: #ffffff !important;
-
 font-size: 15px !important;
 font-weight: 750 !important;
 line-height: 1 !important;
-
 visibility: visible !important;
 opacity: 1 !important;
 }
@@ -635,15 +592,12 @@ opacity: 1 !important;
 .service-book-btn
 i {
 display: inline-block !important;
-
 margin-left: 9px !important;
-
 color: #ffffff !important;
-
 font-size: 17px !important;
 line-height: 1 !important;
-
 visibility: visible !important;
+opacity: 1 !important;
 }
 
 .services-page .modern-service-card
@@ -652,10 +606,7 @@ visibility: visible !important;
 .service-book-btn:hover {
 transform: translateY(-3px);
 filter: brightness(1.03);
-
-box-shadow:
-0 14px 28px rgba(24, 143, 216, 0.25);
-
+box-shadow: 0 14px 28px rgba(24, 143, 216, 0.25);
 color: #ffffff;
 }
 
@@ -664,9 +615,7 @@ color: #ffffff;
 .service-card
 .service-book-btn:active {
 transform: translateY(0);
-
-box-shadow:
-0 8px 18px rgba(24, 143, 216, 0.18);
+box-shadow: 0 8px 18px rgba(24, 143, 216, 0.18);
 }
 
 /* =========================================================
@@ -676,48 +625,32 @@ PRICE AREA
 .services-page .modern-service-card .service-bottom {
 position: relative;
 z-index: 5;
-
 width: 100%;
-
 height: 60px;
 min-height: 60px;
-
 flex: 0 0 60px;
-
 flex-shrink: 0;
-
 display: flex;
-
 align-items: flex-start;
 justify-content: flex-start;
-
 margin-top: auto;
-
 padding-top: 10px;
-
 border-top: 1px solid #edf2f7;
-
 visibility: visible !important;
 opacity: 1 !important;
-
 overflow: visible;
 }
 
 .services-page .modern-service-card .price-section {
 width: 100%;
-
 display: flex;
 flex-direction: column;
-
 align-items: flex-start;
 justify-content: flex-start;
-
 margin: 0;
 padding: 0;
-
 visibility: visible !important;
 opacity: 1 !important;
-
 overflow: visible;
 }
 
@@ -725,23 +658,16 @@ overflow: visible;
 .price-section
 span {
 display: block !important;
-
 width: auto;
 height: auto;
-
 margin: 0 0 1px;
 padding: 0;
-
 color: #7b91ad !important;
-
 font-size: 10px !important;
 line-height: 15px !important;
-
 font-weight: 700 !important;
-
 text-transform: uppercase;
 letter-spacing: 0.7px;
-
 visibility: visible !important;
 opacity: 1 !important;
 }
@@ -750,20 +676,14 @@ opacity: 1 !important;
 .price-section
 strong {
 display: block !important;
-
 width: auto;
 height: auto;
-
 margin: 0;
 padding: 0;
-
 color: #0878c9 !important;
-
 font-size: 21px !important;
 line-height: 27px !important;
-
 font-weight: 800 !important;
-
 visibility: visible !important;
 opacity: 1 !important;
 }
@@ -780,63 +700,46 @@ EMPTY SERVICES
 
 .services-page .empty-services {
 min-height: 360px;
-
 display: flex;
 flex-direction: column;
-
 align-items: center;
 justify-content: center;
-
 text-align: center;
-
 padding: 40px 20px;
 }
 
 .services-page .empty-icon {
 width: 70px;
 height: 70px;
-
 display: flex;
 align-items: center;
 justify-content: center;
-
 margin-bottom: 18px;
-
 border-radius: 20px;
-
 background: #eaf5fd;
 color: #168bd4;
-
 font-size: 25px;
 }
 
 .services-page .empty-label {
 margin-bottom: 8px;
-
 color: #168bd4;
-
 font-size: 11px;
 font-weight: 800;
-
 letter-spacing: 1px;
 }
 
 .services-page .empty-services h3 {
 margin: 0 0 8px;
-
 color: #173653;
-
 font-size: 25px;
 font-weight: 800;
 }
 
 .services-page .empty-services p {
 max-width: 550px;
-
 margin: 0;
-
 color: #8094aa;
-
 font-size: 14px;
 line-height: 1.7;
 }
@@ -847,69 +750,47 @@ TRUST SECTION
 
 .services-page .services-trust {
 display: grid;
-
 grid-template-columns: repeat(3, 1fr);
-
 gap: 20px;
-
 margin-top: 45px;
-
 padding-top: 30px;
-
 border-top: 1px solid #dfeaf4;
 }
 
 .services-page .trust-item {
 display: flex;
-
 align-items: center;
-
 gap: 13px;
-
 padding: 15px;
-
 background: #ffffff;
-
 border: 1px solid #e6eff7;
-
 border-radius: 14px;
 }
 
 .services-page .trust-icon {
 width: 43px;
 height: 43px;
-
 display: flex;
-
 align-items: center;
 justify-content: center;
-
 flex-shrink: 0;
-
 border-radius: 12px;
-
 background: #edf7ff;
 color: #168bd4;
-
 font-size: 18px;
 }
 
 .services-page .trust-item strong {
 display: block;
-
 margin-bottom: 3px;
-
 color: #29445e;
-
 font-size: 13px;
 font-weight: 750;
 }
 
 .services-page .trust-item span {
 display: block;
-
 color: #8a9caf;
-
 font-size: 11px;
 }
 
@@ -919,20 +800,23 @@ TABLET
 
 @media (max-width: 1200px) {
 
+
 .services-page .services-grid {
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
 .services-page .modern-service-card {
-height: 390px;
-min-height: 390px;
-max-height: 390px;
+    height: 390px;
+    min-height: 390px;
+    max-height: 390px;
 }
 
 .services-page .services-hero h1 {
-font-size: 48px;
+    font-size: 48px;
 }
+
+
 }
 
 /* =========================================================
@@ -941,24 +825,27 @@ SMALL TABLET
 
 @media (max-width: 900px) {
 
+
 .services-page .services-grid {
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .services-page .services-topbar {
-align-items: flex-start;
-flex-direction: column;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .services-page .service-count-card {
-width: 100%;
-max-width: 250px;
+    width: 100%;
+    max-width: 250px;
 }
 
 .services-page .services-trust {
-grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 }
+
+
 }
 
 /* =========================================================
@@ -967,77 +854,239 @@ MOBILE
 
 @media (max-width: 600px) {
 
+
 .services-page .container {
-padding-left: 16px;
-padding-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .services-page .services-hero {
-min-height: 300px;
+    min-height: 300px;
 }
 
 .services-page .services-hero-content {
-padding: 55px 0;
+    padding: 55px 0;
 }
 
 .services-page .services-hero h1 {
-margin-top: 18px;
-font-size: 38px;
-letter-spacing: -1px;
+    margin-top: 18px;
+    font-size: 38px;
+    letter-spacing: -1px;
 }
 
 .services-page .services-hero p {
-font-size: 15px;
-line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 .services-page .services-content {
-padding: 45px 0 55px;
+    padding: 45px 0 55px;
 }
 
 .services-page .services-topbar {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .services-page .services-topbar h2 {
-font-size: 28px;
+    font-size: 28px;
 }
 
 .services-page .services-grid {
-grid-template-columns: 1fr;
-gap: 18px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
 }
 
+/* =====================================================
+   MOBILE SERVICE CARD
+   ===================================================== */
+
 .services-page .modern-service-card {
-height: 380px;
-min-height: 380px;
-max-height: 380px;
-padding: 18px;
+    width: 100%;
+    height: auto;
+    min-height: 390px;
+    max-height: none;
+    padding: 18px;
+    border-radius: 20px;
 }
+
+.services-page .service-icon-wrapper {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.services-page .service-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    font-size: 20px;
+    border-radius: 14px;
+}
+
+.services-page .service-number {
+    padding-top: 7px;
+    font-size: 12px;
+}
+
+.services-page .service-category {
+    margin-top: 11px;
+    padding: 7px 11px;
+    font-size: 10px;
+}
+
+/* =====================================================
+   MOBILE CARD CONTENT
+   ===================================================== */
 
 .services-page .modern-service-card
 .service-card-content {
-height: 180px;
-min-height: 180px;
-max-height: 180px;
-flex-basis: 180px;
+    width: 100%;
+    height: auto;
+    min-height: 190px;
+    max-height: none;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
 }
+
+.services-page .modern-service-card
+.service-card-content
+.service-card {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+/* =====================================================
+   MOBILE TITLE
+   ===================================================== */
 
 .services-page .modern-service-card
 .service-card-content
 .service-card
 h5 {
-font-size: 23px;
+    width: 100%;
+    margin: 12px 0 8px;
+    padding: 0;
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 800;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+/* =====================================================
+   MOBILE DESCRIPTION
+   ===================================================== */
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+p {
+    width: 100%;
+    height: auto;
+    min-height: 46px;
+    max-height: 69px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 23px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/* =====================================================
+   MOBILE BOOK BUTTON
+   ===================================================== */
 
 .services-page .modern-service-card
 .service-card-content
 .service-card
 .service-book-btn {
-height: 52px;
-min-height: 52px;
-max-height: 52px;
+    width: 100%;
+    height: 52px;
+    min-height: 52px;
+    max-height: 52px;
+    flex-shrink: 0;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding: 0 16px !important;
+    border-radius: 13px;
+    font-size: 15px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+.service-book-btn
+span {
+    font-size: 15px !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+}
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+.service-book-btn
+i {
+    margin-left: 8px !important;
+    font-size: 16px !important;
+}
+
+/* =====================================================
+   MOBILE PRICE
+   ===================================================== */
+
+.services-page .modern-service-card .service-bottom {
+    width: 100%;
+    height: 58px;
+    min-height: 58px;
+    flex: 0 0 58px;
+    margin-top: 12px;
+    padding-top: 9px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-top: 1px solid #edf2f7;
+    overflow: visible;
+}
+
+.services-page .modern-service-card .price-section {
+    width: 100%;
+}
+
+.services-page .modern-service-card
+.price-section
+span {
+    font-size: 10px !important;
+    line-height: 14px !important;
+}
+
+.services-page .modern-service-card
+.price-section
+strong {
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+
+
 }
 
 /* =========================================================
@@ -1046,49 +1095,126 @@ SMALL MOBILE
 
 @media (max-width: 400px) {
 
+
 .services-page .container {
-padding-left: 13px;
-padding-right: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .services-page .services-hero h1 {
-font-size: 34px;
+    font-size: 34px;
+}
+
+.services-page .services-hero p {
+    font-size: 14px;
+}
+
+.services-page .services-topbar h2 {
+    font-size: 26px;
+}
+
+.services-page .services-grid {
+    gap: 16px;
 }
 
 .services-page .modern-service-card {
-height: 370px;
-min-height: 370px;
-max-height: 370px;
-padding: 17px;
+    width: 100%;
+    height: auto;
+    min-height: 385px;
+    max-height: none;
+    padding: 17px;
+    border-radius: 19px;
 }
 
 .services-page .service-icon {
-width: 52px;
-height: 52px;
-font-size: 20px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 19px;
+}
+
+.services-page .service-number {
+    font-size: 11px;
+}
+
+.services-page .service-category {
+    margin-top: 10px;
+    padding: 6px 10px;
+    font-size: 9px;
 }
 
 .services-page .modern-service-card
 .service-card-content {
-height: 175px;
-min-height: 175px;
-max-height: 175px;
-flex-basis: 175px;
+    height: auto;
+    min-height: 188px;
+    max-height: none;
+    flex: 1 1 auto;
 }
 
 .services-page .modern-service-card
 .service-card-content
 .service-card
 h5 {
-font-size: 21px;
-line-height: 28px;
+    margin-top: 11px;
+    margin-bottom: 7px;
+    font-size: 21px;
+    line-height: 28px;
+    -webkit-line-clamp: 2;
+}
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+p {
+    font-size: 13.5px;
+    line-height: 22px;
+    min-height: 44px;
+    max-height: 66px;
+    -webkit-line-clamp: 3;
+}
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+.service-book-btn {
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+.service-book-btn
+span {
+    font-size: 14px !important;
+}
+
+.services-page .modern-service-card
+.service-card-content
+.service-card
+.service-book-btn
+i {
+    font-size: 15px !important;
+}
+
+.services-page .modern-service-card .service-bottom {
+    height: 56px;
+    min-height: 56px;
+    flex-basis: 56px;
+    margin-top: 11px;
+    padding-top: 8px;
 }
 
 .services-page .modern-service-card
 .price-section
 strong {
-font-size: 20px !important;
+    font-size: 19px !important;
+    line-height: 25px !important;
 }
+
 }
 
 /* =========================================================

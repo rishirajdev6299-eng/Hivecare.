@@ -387,10 +387,10 @@ function Register() {
           });
 
 
-        console.log(
-          "Registration successful:",
-          response.data
-        );
+        // console.log(
+        //   "Registration successful:",
+        //   response.data
+        // );
 
 
         // ====================================================

@@ -565,10 +565,10 @@ function MyBookings() {
             ? response.data
             : [];
 
-        console.log(
-          "TUTOR SUBJECTS:",
-          data
-        );
+        // console.log(
+        //   "TUTOR SUBJECTS:",
+        //   data
+        // );
 
         setTutorSubjects(data);
 
@@ -675,10 +675,10 @@ function MyBookings() {
             ? response.data
             : [];
 
-        console.log(
-          `${selectedService} OPTIONS:`,
-          data
-        );
+        // console.log(
+        //   `${selectedService} OPTIONS:`,
+        //   data
+        // );
 
         setServiceOptions(data);
 
@@ -1107,10 +1107,10 @@ function MyBookings() {
     };
 
 
-    console.log(
-      "BOOKING DATA:",
-      bookingData
-    );
+    // // console.log(
+    //   "BOOKING DATA:",
+    //   bookingData
+    // );
 
 
     try {

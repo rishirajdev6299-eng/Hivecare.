@@ -239,7 +239,7 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
           reviewComment.trim()
       };
 
-      console.log("Submitting review:", reviewData);
+     // console.log("Submitting review:", reviewData);
 
       await createReview(reviewData);
 
@@ -333,10 +333,10 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
 
       const response = await getUserBookings(user.id);
 
-      console.log(
-        "USER BOOKINGS:",
-        response.data
-      );
+      // console.log(
+      //   "USER BOOKINGS:",
+      //   response.data
+      // );
 
       // =================================================
       // SORT NEWEST BOOKING FIRST
@@ -352,14 +352,14 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
       // DEBUG COMPLETED BOOKINGS
       // =================================================
 
-      console.log(
-        "COMPLETED BOOKINGS:",
-        sortedBookings.filter(
-          (booking) =>
-            booking.status?.toUpperCase() ===
-            "COMPLETED"
-        )
-      );
+      // console.log(
+      //   "COMPLETED BOOKINGS:",
+      //   sortedBookings.filter(
+      //     (booking) =>
+      //       booking.status?.toUpperCase() ===
+      //       "COMPLETED"
+      //   )
+      // );
     } catch (error) {
       console.error(
         "Unable to load bookings:",
@@ -384,10 +384,10 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
 
   const handlePayment = async (booking) => {
     try {
-      console.log(
-        "Starting payment:",
-        booking
-      );
+      // console.log(
+      //   "Starting payment:",
+      //   booking
+      // );
 
       // -------------------------------------------------
       // CREATE RAZORPAY ORDER
@@ -400,10 +400,10 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
 
       const order = response.data;
 
-      console.log(
-        "Payment order:",
-        order
-      );
+      // console.log(
+      //   "Payment order:",
+      //   order
+      // );
 
       // -------------------------------------------------
       // CHECK ORDER
@@ -530,10 +530,10 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
         handler: async function (
           razorpayResponse
         ) {
-          console.log(
-            "Razorpay response:",
-            razorpayResponse
-          );
+          // console.log(
+          //   "Razorpay response:",
+          //   razorpayResponse
+          // );
 
           try {
             const paymentData = {
@@ -553,20 +553,20 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
                   .razorpay_signature
             };
 
-            console.log(
-              "VERIFY PAYMENT DATA:",
-              paymentData
-            );
+            // console.log(
+            //   "VERIFY PAYMENT DATA:",
+            //   paymentData
+            // );
 
             const verifyResponse =
               await verifyPayment(
                 paymentData
               );
 
-            console.log(
-              "Verify response:",
-              verifyResponse.data
-            );
+            // console.log(
+            //   "Verify response:",
+            //   verifyResponse.data
+            // );
 
             // =================================================
             // PAYMENT VERIFIED
@@ -621,9 +621,9 @@ const [showCancelPopup, setShowCancelPopup] = useState(false);
 
         modal: {
           ondismiss: function () {
-            console.log(
-              "Razorpay popup closed"
-            );
+            // // console.log(
+            //   "Razorpay popup closed"
+            // );
           }
         }
       };

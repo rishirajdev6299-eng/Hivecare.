@@ -583,10 +583,10 @@ const confirmLogout = () => {
     setChatLoading(true);
 
     try {
-      console.log(
-        "Sending worker message to HiveCare AI:",
-        message
-      );
+      // console.log(
+      //   "Sending worker message to HiveCare AI:",
+      //   message
+      // );
 
       const result =
         await sendChatMessageAPI({
@@ -606,10 +606,10 @@ const confirmLogout = () => {
             "Not specified",
         });
 
-      console.log(
-        "HiveCare AI response:",
-        result?.data
-      );
+      // console.log(
+      //   "HiveCare AI response:",
+      //   result?.data
+      // );
 
       const data = result?.data;
 

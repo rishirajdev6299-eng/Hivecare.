@@ -5522,7 +5522,13 @@ function AdminDashboard() {
             : "admin-sidebar"
         }
       >
-
+        {adminMenuOpen && (
+          <div
+            className="admin-sidebar-overlay"
+            onClick={() => setAdminMenuOpen(false)}
+            aria-hidden="true"
+          />
+        )}
         <div className="admin-brand">
 
           <div className="brand-icon">

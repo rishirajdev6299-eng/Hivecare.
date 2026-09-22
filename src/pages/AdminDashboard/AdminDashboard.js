@@ -5521,14 +5521,10 @@ function AdminDashboard() {
             ? "admin-sidebar admin-sidebar-open"
             : "admin-sidebar"
         }
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
       >
-        {adminMenuOpen && (
-          <div
-            className="admin-sidebar-overlay"
-            onClick={() => setAdminMenuOpen(false)}
-            aria-hidden="true"
-          />
-        )}
         <div className="admin-brand">
 
           <div className="brand-icon">
@@ -5667,7 +5663,14 @@ function AdminDashboard() {
           MAIN
       ===================================================== */}
 
-      <main className="admin-main">
+      <main
+        className="admin-main"
+        onClick={() => {
+          if (adminMenuOpen) {
+            setAdminMenuOpen(false);
+          }
+        }}
+      >
 
 
         {/* ===================================================
